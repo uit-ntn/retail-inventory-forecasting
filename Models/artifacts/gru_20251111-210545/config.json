@@ -1,0 +1,33 @@
+{
+  "model_name": "GRU",
+  "store_id": "S001",
+  "product_id": "P0005",
+  "lookback": 28,
+  "horizon": 14,
+  "features": [
+    "Price",
+    "Discount",
+    "Demand Forecast",
+    "Competitor Pricing",
+    "Inventory Level",
+    "Weather Condition_Rainy",
+    "Weather Condition_Snowy",
+    "Weather Condition_Sunny",
+    "Seasonality_Spring",
+    "Seasonality_Summer",
+    "Seasonality_Winter",
+    "Region_North",
+    "Region_South",
+    "Region_West",
+    "Category_Electronics",
+    "Category_Furniture",
+    "Category_Groceries",
+    "Category_Toys",
+    "dow",
+    "month",
+    "Holiday/Promotion"
+  ],
+  "target": "Units Sold",
+  "run_stamp": "20251111-210545",
+  "epochs_trained": 21
+}
