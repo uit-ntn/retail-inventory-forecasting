@@ -37,4 +37,4 @@
 | Demand Forecast          |  1.01 |
 | dow                      |  1.01 |
 | month                    |  1.00 |
-*Lưu ý: VIF $\ge 5$ cần được xem xét loại bỏ hoặc kết hợp biến.*
+*Lưu ý: VIF >= 5 cần được xem xét loại bỏ hoặc kết hợp biến.*
