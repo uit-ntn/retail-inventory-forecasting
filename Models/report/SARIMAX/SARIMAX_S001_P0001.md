@@ -1,19 +1,28 @@
-# Báo Cáo Kết Quả Mô Hình SARIMAX
-## Thông tin Chuỗi: Store S001 | Product P0001
----
-### 1. Đánh giá Hiệu suất (Performance)
-| Metric | SARIMAX (Model) | Naive-7 (Baseline) | Kết luận |
-| :--- | :--- | :--- | :--- |
-| **RMSE** | 37.590 | 152.076 | Ratio: **0.25** (Mục tiêu <= 0.85) |
-| **WAPE** | 22.93% | - | Kỳ vọng: 10-20% |
+# 📊 Báo Cáo Kết Quả Mô Hình SARIMAX
+**Store:** S001 | **Product:** P0001
 
-### 2. Thông số Kỹ thuật
+---
+
+## 1. Đánh giá Hiệu suất (Performance)
+
+| Metric | SARIMAX (Model) | Naive-7 (Baseline) | Kết quả |
+| :--- | :--- | :--- | :--- |
+| **RMSE** | **37.590** | 152.076 | Ratio: **0.25** (Target ≤ 0.85) |
+| **WAPE** | **22.93%** | - | Kỳ vọng: 10-20% |
+
+**Kết luận:** ĐẠT YÊU CẦU
+
+---
+
+## 2. Thông số Kỹ thuật
 * **Model Order:** (0, 0, 0) x (0, 0, 0, 7) (m=7)
 * **Thông tin AIC:** 6162.15
-* **Trạng thái:** ĐẠT YÊU CẦU
 
-### 3. Các Yếu tố Ảnh hưởng Chính (Key Drivers)
-*Các biến có trọng số lớn nhất trong việc dự báo:*
+---
+
+## 3. Các Yếu tố Ảnh hưởng Chính (Key Drivers)
+*Các biến số có trọng số lớn nhất trong việc dự báo:*
+
 |                         |         0 |
 |:------------------------|----------:|
 | sigma2                  | 1692.8110 |
@@ -37,10 +46,17 @@
 | Holiday/Promotion       |   -1.4858 |
 | Price                   |   -2.4123 |
 
-### 4. Kết quả Kiểm tra Chất lượng (QC Summary)
-* **Kiểm định nhiễu trắng (Ljung-Box):** p-value = **0.5432**
-    * *Ý nghĩa:* Phần dư ngẫu nhiên (Tốt)
-* **Kiểm tra Đa cộng tuyến (VIF):**
+---
+
+## 4. Kết quả Kiểm tra Chất lượng (QC Summary)
+
+### A. Kiểm định Nhiễu trắng (Residuals)
+* **Ljung-Box p-value:** `0.5432`
+* **Đánh giá:** Phần dư ngẫu nhiên (Tốt)
+
+### B. Kiểm tra Đa cộng tuyến (VIF)
+*Bảng dưới đây liệt kê mức độ tương quan giữa các biến (Yêu cầu VIF < 10)*:
+
 | Feature                 |   VIF |
 |:------------------------|------:|
 | is_weekend              |  2.78 |
@@ -64,4 +80,4 @@
 | month                   |  1.01 |
 
 ---
-*Báo cáo được tạo tự động vào ngày 2025-12-08 14:21:32*
+*Báo cáo được tạo tự động vào ngày 2025-12-08 14:45:30*
