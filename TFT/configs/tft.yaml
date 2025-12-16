@@ -1,0 +1,56 @@
+model_name: Temporal Fusion Transformer (TFT)
+library: Darts (PyTorch Backend)
+dataset:
+  encoder_length: 56
+  prediction_length: 14
+  features:
+    static_covariates:
+    - Store_ID_feat
+    - Product_ID_feat
+    - Region
+    - Category
+    past_covariates:
+    - Price
+    - Discount
+    - Competitor Pricing
+    - Inventory Level
+    future_covariates:
+    - Demand Forecast
+    - Holiday/Promotion
+    - Seasonality
+    - month
+    - dayofweek
+hyperparameters:
+  hidden_size: 64
+  attention_heads: 4
+  dropout: 0.1
+  batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0
+  lstm_layers: 1
+  num_epochs: 30
+training:
+  device: GPU
+  precision: 32-bit (Standard)
+  early_stopping_patience: 5
+metrics:
+  sMAPE: 0.176
+  WAPE: 0.072
+metrics_breakdown:
+  by_category:
+    Clothing: 18.31
+    Electronics: 17.58
+    Furniture: 17.93
+    Groceries: 19.06
+    Toys: 15.07
+  by_region:
+    East: 17.47
+    North: 15.56
+    South: 18.61
+    West: 18.01
+interpretation:
+  top_important_features:
+  - Units Sold (Past)
+  - Price
+  - Demand Forecast
+  note: Feature importance inferred from TFT architecture standard behavior.
