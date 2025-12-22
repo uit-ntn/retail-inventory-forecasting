@@ -1,0 +1,9 @@
+changepoint_prior_scale,seasonality_mode,holidays_prior_scale,val_rmse_mean,n_ok,n_fail
+0.05,additive,10.0,9.311880296200496,8,0
+0.05,additive,1.0,9.314386847616927,8,0
+0.05,multiplicative,10.0,9.386741085018492,8,0
+0.05,multiplicative,1.0,9.395521786152695,8,0
+0.5,multiplicative,1.0,9.754165057482265,8,0
+0.5,multiplicative,10.0,9.757266510095999,8,0
+0.5,additive,10.0,9.912127099455908,8,0
+0.5,additive,1.0,9.912826228186688,8,0
